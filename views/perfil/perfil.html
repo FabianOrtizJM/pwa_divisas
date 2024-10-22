@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="perfil.css">
+</head>
+<style>
+    .foto
+    {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="image-frame">
+            <img src="../../img/addCoins.png" alt="Añadir Monedas" />
+        </div>
+        <div class="button-frame">
+            <button id="foto" onclick="onGuardarClicked()">Seleccionar foto</button>
+        </div>
+        <div class="input-frame">
+            <input type="text" id="nombre_empresa" placeholder="Nombre de la empresa" maxlength="3" />
+        </div>
+
+        <div class="input-frame">
+            <input type="text" id="direccion1" placeholder="Direccion" />
+        </div>
+
+        <div class="input-frame">
+            <input type="text" id="direccion2" placeholder="Direccion #2 (Opcional)" />
+        </div>
+
+        <div class="input-frame">
+            <input type="text" id="codigo_postal" placeholder="C.P." />
+        </div>
+
+        <div class="input-frame">
+            <input type="text" id="ciudad" placeholder="Ciudad" />
+        </div>
+
+        <div class="input-frame">
+            <input type="text" id="estado" placeholder="Estado" />
+        </div>
+        <div class="button-frame">
+            <button id="guardar" onclick="onGuardarClicked()">Guardar</button>
+        </div>
+    </div>
+
+    <script>
+        function onGuardarClicked() {
+            // Aquí puedes agregar la funcionalidad cuando se haga clic en "Guardar"
+            alert("Guardar clickeado!");
+        }
+    </script>
+</body>
+</html>
