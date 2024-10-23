@@ -1,66 +1,40 @@
-* {
-    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: white;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    background-color: white;
-    padding: 20px;
-    max-width: 400px;
-    margin: auto;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-    border-radius: 8px;
-}
-
-.image-frame {
-    border: 1px solid white;
-    background-color: white;
-    margin: 10px 0;
-    text-align: center;
-}
-
-.image-frame img {
-    width: 200px;
-    height: 200px;
-    object-fit: contain;
-}
-
-.input-frame {
-    margin: 10px 0;
-}
-
-.input-frame input {
-    width: 100%;
-    padding: 10px;
-    font-size: 20px;
-    color: black;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin: 0; /* Elimina márgenes adicionales */
-}
-
-.button-frame {
-    margin: 10px 0;
-}
-
-.button-frame button {
-    width: 100%;
-    padding: 20px;
+.btn-success
+{
     background-color: #114676;
-    color: white;
-    font-size: 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 0; /* Elimina márgenes adicionales */
+}
+#btn-foto:hover
+{
+    background-color: #919191;
 }
 
-.button-frame button:hover {
-    background-color: #0e3a5a;
+/* Imagen responsiva */
+.img-fluid {
+    max-width: 100%; /* Ancho máximo completo */
+    max-height: 150px; /* Altura máxima para evitar que sea demasiado grande */
+    height: auto; /* Mantener la proporción de la imagen */
+    object-fit: contain; /* Ajuste de imagen */
+}
+
+/* Limitar el tamaño máximo en pantallas grandes */
+@media (min-width: 769px) {
+    .img-fluid {
+        max-width: 40%; /* Ajustar tamaño máximo en pantallas grandes */
+        max-height: 110px; /* Altura máxima en pantallas grandes */
+    }
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 576px) {
+    .img-fluid {
+        max-width: 25%; /* Ajustar tamaño en móviles */
+        max-height: 100px; /* Altura máxima en móviles */
+    }
+}
+
+/* Para pantallas medianas (tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .img-fluid {
+        max-width: 40%; /* Ajustar tamaño en tablets */
+        max-height: 110px; /* Altura máxima en tablets */
+    }
 }

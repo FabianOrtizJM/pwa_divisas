@@ -6,8 +6,12 @@ const urlsToCache = [
     '/views/perfil/perfil.css',
     '/img/noImage.jpg',
     '/js/compraVenta.js',
-    '/img/icon-192x192.png',
-    '/img/icon-512x512.png'
+    '/img/logo.png',
+    'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css',
+    'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js',
+    'https://code.jquery.com/jquery-3.5.1.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css',
 ];
 
 // Instalar el Service Worker y almacenar archivos en cache
