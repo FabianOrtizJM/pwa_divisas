@@ -1,6 +1,7 @@
-.btn-success
+#btn-guardar
 {
     background-color: #114676;
+    color: white;
 }
 #btn-foto:hover
 {
