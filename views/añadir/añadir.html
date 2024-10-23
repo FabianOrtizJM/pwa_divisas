@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir Monedas</title>
+    <link rel="stylesheet" href="añadir.css">
+</head>
+<body>
+    <div class="container">
+        <div class="image-frame">
+            <img src="../../img/addCoins.png" alt="Añadir Monedas" />
+        </div>
+
+        <div class="input-frame">
+            <input type="text" id="clave" placeholder="Clave" maxlength="3" />
+        </div>
+
+        <div class="input-frame">
+            <input type="text" id="precioV" placeholder="Precio - venta" />
+        </div>
+
+        <div class="input-frame">
+            <input type="text" id="precioC" placeholder="Precio - compra" />
+        </div>
+
+        <div class="button-frame">
+            <button id="guardar" onclick="onGuardarClicked()">Guardar</button>
+        </div>
+    </div>
+
+    <script>
+        function onGuardarClicked() {
+            // Aquí puedes agregar la funcionalidad cuando se haga clic en "Guardar"
+            alert("Guardar clickeado!");
+        }
+    </script>
+</body>
+</html>
