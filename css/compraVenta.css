@@ -1,4 +1,3 @@
-/* styles.css */
 :root{
     --bs-danger: #114676;
     
@@ -51,4 +50,64 @@ h5 {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+/* Estilo base para input y select */
+input, select {
+    height: 40px; /* Altura base */
+    width: 100%;  /* Asegura que ocupe todo el ancho disponible */
+}
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 576px) {
+    input, select {
+        height: 35px; /* Ajuste en pantallas pequeñas */
+    }
+
+    h5 {
+        font-size: 1rem; /* Texto más pequeño en pantallas móviles */
+    }
+
+    .navbar {
+        padding: 0.5rem; /* Reduce padding en la navbar para móviles */
+    }
+
+    .nav .nav-item button {
+        font-size: 0.9rem; /* Tamaño de texto en los tabs para móviles */
+    }
+}
+
+/* Media query para pantallas medianas (tablets y mayores) */
+@media (min-width: 768px) {
+    input, select {
+        height: 50px; /* Aumenta la altura en pantallas medianas */
+    }
+
+    h5 {
+        font-size: 1.25rem; /* Aumenta tamaño de texto en pantallas medianas */
+    }
+
+    .navbar {
+        padding: 1rem;
+    }
+}
+
+/* Media query para pantallas grandes (laptops y desktop) */
+@media (min-width: 992px) {
+    input, select {
+        height: 60px; /* Aumenta la altura en pantallas grandes */
+        font-size: 1.2rem; /* Aumenta el tamaño de la fuente dentro de los inputs */
+    }
+
+    h5 {
+        font-size: 1.5rem; /* Títulos más grandes */
+    }
+
+    .navbar {
+        padding: 1.5rem; /* Navbar más espaciosa en pantallas grandes */
+    }
+
+    .nav .nav-item button {
+        font-size: 1.1rem; /* Aumenta tamaño del texto en los tabs */
+    }
 }
