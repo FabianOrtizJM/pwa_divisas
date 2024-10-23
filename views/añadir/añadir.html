@@ -4,36 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Añadir Monedas</title>
+    <!-- Incluye Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="añadir.css">
 </head>
-<body>
-    <div class="container">
-        <div class="image-frame">
-            <img src="../../img/addCoins.png" alt="Añadir Monedas" />
-        </div>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="p-4">
+            <div class="text-center mb-4">
+                <img src="../../img/addCoins.png" class="img-fluid" alt="Añadir Monedas" style="max-width: 200px;" />
+            </div>
 
-        <div class="input-frame">
-            <input type="text" id="clave" placeholder="Clave" maxlength="3" />
-        </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" id="clave" placeholder="Clave" maxlength="3" />
+            </div>
 
-        <div class="input-frame">
-            <input type="text" id="precioV" placeholder="Precio - venta" />
-        </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" id="precioV" placeholder="Precio - venta" />
+            </div>
 
-        <div class="input-frame">
-            <input type="text" id="precioC" placeholder="Precio - compra" />
-        </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" id="precioC" placeholder="Precio - compra" />
+            </div>
 
-        <div class="button-frame">
-            <button id="guardar" onclick="onGuardarClicked()">Guardar</button>
+            <div class="d-grid">
+                <button id="guardar" class="btn btn-primary btn-lg" onclick="onGuardarClicked()">Guardar</button>
+            </div>
         </div>
     </div>
 
     <script>
         function onGuardarClicked() {
-            // Aquí puedes agregar la funcionalidad cuando se haga clic en "Guardar"
             alert("Guardar clickeado!");
         }
     </script>
+    <!-- Incluye Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
