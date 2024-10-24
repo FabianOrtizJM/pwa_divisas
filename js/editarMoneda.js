@@ -82,3 +82,14 @@ document.getElementById('btn-editar-moneda').addEventListener('click', function(
         alert('Error al actualizar la moneda.');
     }
 });
+
+document.getElementById('btn-regreso-home').addEventListener('click', function() {
+    window.location.href = '../index.html';
+});
+
+
+const storedEmpresa = JSON.parse(localStorage.getItem('empresa'));
+    if (storedEmpresa) {
+        document.getElementById('navbar-foto').src = storedEmpresa.foto || '/img/noImage.jpg';
+        document.getElementById('navbar-empresa').textContent = storedEmpresa.nombre || 'nombre_empresa';
+    }
