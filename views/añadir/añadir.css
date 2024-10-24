@@ -7,6 +7,9 @@
     background-color: #919191;
 }
 
+.navbar {
+    padding: .5rem;
+}
 /* Imagen responsiva */
 .img-fluid {
     max-width: 100%; /* Ancho máximo completo */
