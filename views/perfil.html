@@ -20,10 +20,10 @@
     <!-- Navbar -->
     <nav class="navbar sticky-top navbar-light" style="background-color: #114676 !important;">
         <div class="container-fluid">
-            <a class="navbar-brand text-white" href="#">
-                <i class="bi bi-image-fill" id=""> &nbsp; </i>
-                Nombre de empresa
-            </a>
+            <div style="width: 40px;" class="d-flex align-items-center">
+                <img src="/img/noImage.jpg" class="img-thumbnail" alt="" style="background-color: transparent;" id="navbar-foto">
+                <label for="" class="form-label text-white ms-2 mb-0" id="navbar-empresa" style="font-size: 20px;">nombre_empresa</label>
+            </div>
         </div>
     </nav>
     <!-- Main Content -->
@@ -76,7 +76,7 @@
     <nav class="navbar navbar-expand bg-primary navbar-dark fixed-bottom" style="background-color: #114676 !important;">
         <ul class="navbar-nav nav-justified w-100">
             <li class="nav-item">
-                <a class="nav-link text-center" href="#">
+                <a class="nav-link text-center" href="/index.html">
                     <i class="bi bi-house-door-fill"></i><br>
                     Inicio
                 </a>
@@ -150,6 +150,8 @@
                 document.getElementById('ciudad').value = empresa.ciudad;
                 document.getElementById('estado').value = empresa.estado;
                 document.getElementById('empresa-foto').src = empresa.foto;
+                document.getElementById('navbar-foto').src = empresa.foto;
+                document.getElementById('navbar-empresa').innerText = empresa.nombre;
             }
         };
     </script>

@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Por defecto, mostrar la pestaña de venta
     document.getElementById("pills-vender-tab").classList.add("active");
     document.getElementById("pills-vender").classList.add("show", "active");
-
     // Obtener las monedas guardadas en localStorage
     const monedasGuardadas = JSON.parse(localStorage.getItem('monedas')) || [];
 
@@ -29,6 +28,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // Asignar la validación de input para los montos
     document.getElementById("montoComprar").addEventListener("input", validarMontoInput);
     document.getElementById("montoVender").addEventListener("input", validarMontoInput);
+
+    const storedEmpresa = JSON.parse(localStorage.getItem('empresa'));
+    if (storedEmpresa) {
+        document.getElementById('navbar-foto').src = storedEmpresa.foto || '/img/noImage.jpg';
+        document.getElementById('navbar-empresa').textContent = storedEmpresa.nombre || 'nombre_empresa';
+    }
 });
 
 // Función para llenar los select con las monedas disponibles
