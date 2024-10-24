@@ -15,10 +15,10 @@
     <!-- Navbar -->
     <nav class="navbar sticky-top navbar-light" style="background-color: #114676 !important;">
         <div class="container-fluid">
-            <a class="navbar-brand text-white" href="#">
-                <i class="bi bi-image-fill"> &nbsp; </i>
-                Nombre de empresa
-            </a>
+            <div style="width: 40px;" class="d-flex align-items-center">
+                <img src="../img/noImage.jpg" class="img-thumbnail" alt="" style="background-color: transparent;" id="navbar-foto">
+                <label for="" class="form-label text-white ms-2 mb-0" id="navbar-empresa" style="font-size: 20px;">nombre_empresa</label>
+            </div>
         </div>
     </nav>
 
@@ -42,8 +42,11 @@
                     <label for="precioV" class="form-label">Precio Venta</label>
                     <input type="number" step="0.01" id="precioV" class="form-control">
                 </div>
-                <div class="col-12 mb-3 mt-4">
-                    <button class="btn color-button col-12 offset-md-3 col-md-6" id="btn-editar-moneda">Guardar Cambios</button>
+                <div class="col-6 mb-3 mt-4">
+                    <button class="btn color-button col-12 col-md-12" id="btn-regreso-home">Regresar a Inicio</button>
+                </div>
+                <div class="col-6 mb-3 mt-4">
+                    <button class="btn color-button col-12 col-md-12" id="btn-editar-moneda">Guardar Cambios</button>
                 </div>
             </div>
         </div>
