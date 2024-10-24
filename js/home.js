@@ -60,5 +60,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Función para editar moneda (por ahora muestra un alert)
 function editarMoneda(clave) {
-    alert("Editando moneda: " + clave);
+    window.location.href = `views/editar.html?clave=${clave}`;
 }
