@@ -1,59 +1,64 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const currencies = [
-        { name: "USD", buy: 34543, sell: 324 },
-        { name: "EUR", buy: 21323, sell: 1023 },
-        { name: "GBP", buy: 28120, sell: 1520 },
-        { name: "KWN", buy: 28120, sell: 1520 }
-    ];
+    // Obtener las monedas almacenadas en localStorage
+    const currencies = JSON.parse(localStorage.getItem('monedas')) || [];
 
+    // Obtener el contenedor donde se agregarán las tarjetas dinámicamente
     const container = document.getElementById("currency-container");
 
+    // Recorrer las monedas y crear una tarjeta para cada una
     currencies.forEach(currency => {
-        // Create the main frame for each currency
+        // Crear la columna contenedora para cada tarjeta
         const col = document.createElement('div');
         col.className = 'col-12 col-md-6 col-lg-4';
 
+        // Crear el contenedor de la tarjeta (frame)
         const frame = document.createElement('div');
         frame.className = 'frame';
 
-        // Add edit button
+        // Añadir botón de edición
         const editButton = document.createElement('button');
         editButton.className = 'edit-button';
         editButton.style.color = 'white'; 
-        editButton.onclick = () => editarMoneda(currency.name);
+        editButton.onclick = () => editarMoneda(currency.clave);
         const editIcon = document.createElement('i');
         editIcon.className = 'bi bi-pencil-fill';
         editButton.appendChild(editIcon);
         frame.appendChild(editButton);
 
-        // Currency name
+        // Añadir el nombre de la moneda (clave)
         const currencyName = document.createElement('div');
         currencyName.className = 'text-center mb-3 label-medium';
-        currencyName.textContent = currency.name;
+        currencyName.textContent = currency.clave;
         frame.appendChild(currencyName);
 
-        // Create the buy and sell sections
+        // Crear las secciones de compra y venta
         const row = document.createElement('div');
         row.className = 'row';
 
         const buyCol = document.createElement('div');
         buyCol.className = 'col-6 text-center';
-        buyCol.innerHTML = `<div class="label-small">Compra</div><div class="label-large">$${currency.buy.toLocaleString()}</div>`;
+        buyCol.innerHTML = `<div class="label-small">Compra</div><div class="label-large">$${currency.precioCompra.toFixed(2)}</div>`;
 
         const sellCol = document.createElement('div');
         sellCol.className = 'col-6 text-center';
-        sellCol.innerHTML = `<div class="label-small">Venta</div><div class="label-large">$${currency.sell.toLocaleString()}</div>`;
+        sellCol.innerHTML = `<div class="label-small">Venta</div><div class="label-large">$${currency.precioVenta.toFixed(2)}</div>`;
 
+        // Añadir las secciones a la fila
         row.appendChild(buyCol);
         row.appendChild(sellCol);
+
+        // Añadir la fila al frame
         frame.appendChild(row);
 
+        // Añadir el frame a la columna
         col.appendChild(frame);
+
+        // Añadir la columna al contenedor de monedas
         container.appendChild(col);
     });
 });
 
-// Edit function for currency
-function editarMoneda(moneda) {
-    alert("Editando moneda: " + moneda);
+// Función para editar moneda (por ahora muestra un alert)
+function editarMoneda(clave) {
+    alert("Editando moneda: " + clave);
 }
