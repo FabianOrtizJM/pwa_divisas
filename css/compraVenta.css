@@ -104,7 +104,7 @@ input, select {
     }
 
     .navbar {
-        padding: 1.5rem; /* Navbar más espaciosa en pantallas grandes */
+        padding: .5rem; /* Navbar más espaciosa en pantallas grandes */
     }
 
     .nav .nav-item button {
