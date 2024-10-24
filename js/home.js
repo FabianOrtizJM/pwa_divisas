@@ -56,9 +56,15 @@ document.addEventListener("DOMContentLoaded", function() {
         // Añadir la columna al contenedor de monedas
         container.appendChild(col);
     });
+
+    const storedEmpresa = JSON.parse(localStorage.getItem('empresa'));
+    if (storedEmpresa) {
+        document.getElementById('navbar-foto').src = storedEmpresa.foto || '/img/noImage.jpg';
+        document.getElementById('navbar-empresa').textContent = storedEmpresa.nombre || 'nombre_empresa';
+    }
 });
 
 // Función para editar moneda (por ahora muestra un alert)
 function editarMoneda(clave) {
-    alert("Editando moneda: " + clave);
+    window.location.href = `views/editar.html?clave=${clave}`;
 }

@@ -1,6 +1,12 @@
-.btn-success
+#btn-editar-moneda
 {
     background-color: #114676;
+    color: white;
+}
+#btn-guardar-moneda
+{
+    background-color: #114676;
+    color: white;
 }
 #btn-foto:hover
 {

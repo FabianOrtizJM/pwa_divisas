@@ -51,6 +51,7 @@ document.getElementById('btn-guardar-moneda').addEventListener('click', function
     localStorage.setItem('monedas', JSON.stringify(monedas));
 
     alert('Moneda guardada correctamente');
+    window.location.href = '../index.html';
 });
 
 // Cargar monedas almacenadas (opcional)
