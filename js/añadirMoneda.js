@@ -59,3 +59,9 @@ window.onload = function() {
     const monedas = JSON.parse(localStorage.getItem('monedas')) || [];
     console.log(monedas);  // Mostrar las monedas en la consola
 };
+
+const storedEmpresa = JSON.parse(localStorage.getItem('empresa'));
+    if (storedEmpresa) {
+        document.getElementById('navbar-foto').src = storedEmpresa.foto || '/img/noImage.jpg';
+        document.getElementById('navbar-empresa').textContent = storedEmpresa.nombre || 'nombre_empresa';
+    }
