@@ -12,6 +12,9 @@ h5 {
 .nav-link.active {
     background-color: #114676;
 }
+#navbar-empresa{
+    font-weight:normal !important;
+}
 .form-label {
     font-weight: bold;
 }
